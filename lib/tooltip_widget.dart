@@ -20,7 +20,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
       child: const Icon(
         Icons.info_outlined,
         size: 20,
-        color: Colors.blueAccent,
+        color: Colors.white,
       ),
     );
   }
@@ -37,7 +37,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12.0),
             ),
-            color: const Color(0xff009455);,
+            color: const Color(0xff009455),
             child: const Text(
               "Ok",
               style: TextStyle(color: Colors.white),
@@ -138,7 +138,8 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
                           tween: Tween<double>(begin: 0, end: 1),
                           builder: (BuildContext context, double value, child) {
                             return Icon(Icons.info_outlined,
-                                size: size * value, color: Colors.white);
+                                size: size * value,
+                                color: const Color(0xff009455));
                           },
                         ),
                       ),
@@ -160,7 +161,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12.0),
                       ),
-                      color: const Color(0xff009455);,
+                      color: const Color(0xff009455),
                       child: const Text(
                         "Ok",
                         style: TextStyle(color: Colors.white),
