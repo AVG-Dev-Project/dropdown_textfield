@@ -30,14 +30,14 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
         context: context,
         content: Text(msg),
         icon: Icons.info_outlined,
-        iconColor: Colors.blue,
+        iconColor: Colors.white,
         actionsAlignment: MainAxisAlignment.center,
         actions: [
           MaterialButton(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(12.0),
             ),
-            color: Colors.lightBlueAccent,
+            color: const Color(0xff009455);,
             child: const Text(
               "Ok",
               style: TextStyle(color: Colors.white),
@@ -138,7 +138,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
                           tween: Tween<double>(begin: 0, end: 1),
                           builder: (BuildContext context, double value, child) {
                             return Icon(Icons.info_outlined,
-                                size: size * value, color: Colors.blue);
+                                size: size * value, color: Colors.white);
                           },
                         ),
                       ),
@@ -147,7 +147,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
                       height: 50,
                     ),
                     Align(
-                      alignment: Alignment.centerLeft,
+                      alignment: Alignment.center,
                       child: Text(
                         widget.msg,
                         style: Theme.of(context).textTheme.subtitle1,
@@ -160,7 +160,7 @@ class _ToolTipWidgetState extends State<ToolTipWidget> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12.0),
                       ),
-                      color: Colors.lightBlueAccent,
+                      color: const Color(0xff009455);,
                       child: const Text(
                         "Ok",
                         style: TextStyle(color: Colors.white),
