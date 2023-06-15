@@ -1093,6 +1093,7 @@ class _MultiSelectionState extends State<MultiSelection> {
                 itemBuilder: (BuildContext context, int index) {
                   return InkWell(
                     onTap: () {
+                      FocusScope.of(context).requestFocus(FocusNode())
                       setState(() {
                         multiSelectionValue[index] =
                             !multiSelectionValue[index];
@@ -1133,6 +1134,7 @@ class _MultiSelectionState extends State<MultiSelection> {
                             Checkbox(
                               value: multiSelectionValue[index],
                               onChanged: (value) {
+                                FocusScope.of(context).requestFocus(FocusNode())
                                 if (value != null) {
                                   setState(() {
                                     multiSelectionValue[index] = value;
